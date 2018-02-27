@@ -1,4 +1,4 @@
-require './gilded_rose.rb'
+require './lib/gilded_rose.rb'
 require 'web_helpers.rb'
 
 describe GildedRose do

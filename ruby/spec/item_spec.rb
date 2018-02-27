@@ -1,4 +1,4 @@
-require './gilded_rose.rb'
+require './lib/gilded_rose.rb'
 
 describe Item do
 
