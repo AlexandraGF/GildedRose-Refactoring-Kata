@@ -11,13 +11,14 @@ class GildedRose
   def update_quality()
     @items.each do |item|
     @item = item
-      if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert"
+      if item.name != "Aged Brie" && item.name != "Backstage passes to a TAFKAL80ETC concert"
         quality_down
       else
         quality_up
       end
         sell_in_date_down
         sell_in_date_negative
+        conjured_item_quality_down
     end
   end
 end

@@ -49,3 +49,9 @@ private
       @item.quality = @item.quality + 1
     end
   end
+
+  def conjured_item_quality_down
+    if @item.name == "Conjured"
+      @item.quality = @item.quality - 1
+    end
+  end

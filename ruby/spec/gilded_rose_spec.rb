@@ -63,4 +63,10 @@ describe GildedRose do
     end
 
   end
+
+  describe 'tests for new item: Conjured ' do
+    it 'check that quality lowers by 2' do
+      expect((gilded_rose_conjured_item.update_quality)[2].quality).to eq(3)
+    end
+  end
 end
