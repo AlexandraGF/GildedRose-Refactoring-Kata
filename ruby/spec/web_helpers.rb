@@ -52,10 +52,10 @@ def gilded_rose5_positiv4
   GildedRose.new([items1,items2])
 end
 
-def gilded_rose5_negativ
-  items1 = Item.new('Aged Brie', 20, -3)
-  items2 = Item.new('Sulfuras, Hand of Ragnaros', 15, -4)
-  items3 = Item.new('Backstage passes to a TAFKAL80ETC concert', 14, -2)
-  items4 = Item.new('Elixir of the Mongoose', 10, -2)
+def gilded_rose_negativ
+  items1 = Item.new('Aged Brie', 20, 3)
+  items2 = Item.new('Sulfuras, Hand of Ragnaros', 15, 4)
+  items3 = Item.new('Backstage passes to a TAFKAL80ETC concert', 14, 2)
+  items4 = Item.new('Elixir of the Mongoose', -10, 2)
   GildedRose.new([items1,items2,items3,items4])
 end

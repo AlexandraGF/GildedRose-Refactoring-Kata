@@ -57,5 +57,9 @@ describe GildedRose do
       expect((gilded_rose5_positiv4.update_quality)[0].quality).to eq(0)
     end
 
+    it 'check when sell_in is negative' do
+      expect((gilded_rose_negativ.update_quality)[3].quality).to eq(0)
+    end
+
   end
 end
