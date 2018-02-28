@@ -4,44 +4,52 @@ class GildedRose
 
   def initialize(items)
     @items = items
+    # @item
+    # @quality
   end
 
   def update_quality()
     @items.each do |item|
+@item = item
+# @quality = item
+      #first loop 1 start
       if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert"
+# 1.1 start
+        # if item.quality > 0 && item.name != "Sulfuras, Hand of Ragnaros"
+        #     item.quality = item.quality - 1
+        # end
+ # private method for lowering the quality
 
-        if item.quality > 0 && item.name != "Sulfuras, Hand of Ragnaros"
-            item.quality = item.quality - 1
-        end
+        quality_lower
+
 
       else
+  # 1.2  start
         if item.quality < 50
           item.quality = item.quality + 1
+      # 1.2.1  start
           if item.name == "Backstage passes to a TAFKAL80ETC concert" || item.name == "Aged Brie"
-
+# 1.2.1.1 start
             if item.sell_in < 11 && item.sell_in > 5
               item.quality = item.quality + 1
             elsif item.sell_in < 11 && item.sell_in < 6
               item.quality = item.quality + 2
             end
-            # if item.sell_in < 11
-            #     item.quality = item.quality + 1
-            # end
-            # if item.sell_in < 6
-            #     item.quality = item.quality + 1
-            # end
+# 1.2.1.1 end
           end
-
+# 1.2.1 end
         end
-
+#1.2 end
       end
+#1.1 end
 
-
+#second loop 2
       if item.name != "Sulfuras, Hand of Ragnaros"
         item.sell_in = item.sell_in - 1
       end
-
+#third loop 3
       if item.sell_in < 0
+
         if item.name != "Aged Brie"
 
           if item.name != "Backstage passes to a TAFKAL80ETC concert"
@@ -62,10 +70,19 @@ class GildedRose
         end
 
       end
-
+#end of loop 3
 
     end
   end
+
+
+private 
+  def quality_lower
+    if @item.quality > 0 && @item.name != "Sulfuras, Hand of Ragnaros"
+        @item.quality = @item.quality - 1
+    end
+  end
+
 end
 
 class Item
