@@ -20,25 +20,26 @@ class GildedRose
         # end
  # private method for lowering the quality
 
-        quality_lower
+        quality_down
 
 
       else
+        quality_up
   # 1.2  start
-        if item.quality < 50
-          item.quality = item.quality + 1
-      # 1.2.1  start
-          if item.name == "Backstage passes to a TAFKAL80ETC concert" || item.name == "Aged Brie"
-# 1.2.1.1 start
-            if item.sell_in < 11 && item.sell_in > 5
-              item.quality = item.quality + 1
-            elsif item.sell_in < 11 && item.sell_in < 6
-              item.quality = item.quality + 2
-            end
-# 1.2.1.1 end
-          end
-# 1.2.1 end
-        end
+#         if item.quality < 50
+#           item.quality = item.quality + 1
+#       # 1.2.1  start
+#           if item.name == "Backstage passes to a TAFKAL80ETC concert" || item.name == "Aged Brie"
+# # 1.2.1.1 start
+#             if item.sell_in < 11 && item.sell_in > 5
+#               item.quality = item.quality + 1
+#             elsif item.sell_in < 11 && item.sell_in < 6
+#               item.quality = item.quality + 2
+#             end
+# # 1.2.1.1 end
+#           end
+# # 1.2.1 end
+#         end
 #1.2 end
       end
 #1.1 end
@@ -76,10 +77,27 @@ class GildedRose
   end
 
 
-private 
-  def quality_lower
+private
+  def quality_down
     if @item.quality > 0 && @item.name != "Sulfuras, Hand of Ragnaros"
         @item.quality = @item.quality - 1
+    end
+  end
+
+  def quality_up
+    if @item.quality < 50
+      @item.quality = @item.quality + 1
+  # 1.2.1  start
+      if @item.name == "Backstage passes to a TAFKAL80ETC concert" || @item.name == "Aged Brie"
+  # 1.2.1.1 start
+        if @item.sell_in < 11 && @item.sell_in > 5
+          @item.quality = @item.quality + 1
+        elsif @item.sell_in < 11 && @item.sell_in < 6
+          @item.quality = @item.quality + 2
+        end
+  # 1.2.1.1 end
+      end
+  # 1.2.1 end
     end
   end
 
