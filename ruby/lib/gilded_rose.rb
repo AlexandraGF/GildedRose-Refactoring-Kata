@@ -23,30 +23,6 @@ class GildedRose
 #third loop 3
 #fourth private method
         sell_in_date_negative
-      # if item.sell_in < 0
-      #
-      #   if item.name != "Aged Brie"
-      #
-      #     if item.name != "Backstage passes to a TAFKAL80ETC concert"
-      #
-      #       if item.quality > 0 && item.name != "Sulfuras, Hand of Ragnaros"
-      #           item.quality = item.quality - 1
-      #       end
-      #
-      #     else
-      #       item.quality = item.quality - item.quality
-      #     end
-      #
-      #   else
-      #     if item.quality < 50
-      #       item.quality = item.quality + 1
-      #     end
-      #
-      #   end
-      #
-      # end
-#end of loop 3
-
     end
   end
 
